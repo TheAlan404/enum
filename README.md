@@ -1,0 +1,2 @@
+# enum
+TypeScript "algebraic" enums
