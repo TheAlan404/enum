@@ -5,7 +5,7 @@ TypeScript "algebraic" enums
 ## Usage
 
 ```ts
-import { Enum, match } from "@alan404/enum";
+import { Enum, match, createFactory, variant } from "@alan404/enum";
 
 type Segment = Enum<{
     text: { content: string; bold: boolean };
@@ -35,6 +35,20 @@ segmentToString({
         bold: false
     },
 });
+
+// NEW! in 0.2
+// Optional variant function
+segmentToString(
+    variant<Segment>("image", { src: "..." })
+)
+
+// NEW! in 0.2
+// Optional factory-style
+const Segment = createFactory<Segment>();
+
+segmentToString(
+    Segment.text({ content: "meow", bold: true })
+)
 ```
 
 ## Exports
@@ -125,3 +139,21 @@ EnumData<SingleOrMany<T>, "many">
 // = T[]
 ```
 
+### `variant<Enum>(type, data) => Enum`
+
+Create an enum variant
+
+### `createFactory<Enum>() => EnumInitializers<Enum>`
+
+Creates an enum factory. Use it like this:
+
+```ts
+const SingleOrMany = createFactory<SingleOrMany>();
+type SingleOrMany = Enum<{
+    single: string,
+    many: string[],
+}>
+
+SingleOrMany.single("hello world");
+// { type: "single", data: "hello world" }
+```

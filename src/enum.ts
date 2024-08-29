@@ -14,3 +14,8 @@ export type EnumVariant<E extends Enum<Obj>, Type extends E["type"]> = Extract<E
 
 export type EnumData<E extends Enum<Obj>, Type extends E["type"]> = EnumVariant<E, Type>["data"];
 
+export type EnumAsTuple<E extends Enum<Obj>> = {
+    [Variant in E["type"]]: [Variant, EnumData<E, Variant>];
+}[E["type"]];
+
+

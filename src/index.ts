@@ -3,6 +3,7 @@ export {
     EnumVariant,
     EnumData,
     InverseEnum,
+    EnumAsTuple,
 } from "./enum";
 
 export {
@@ -11,3 +12,12 @@ export {
     Matcher,
     WildcardMatcher,
 } from "./match";
+
+export {
+    createFactory,
+    EnumInitializers,
+} from "./factory";
+
+export {
+    variant,
+} from "./variant";
