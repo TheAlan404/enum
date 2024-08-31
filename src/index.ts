@@ -16,6 +16,8 @@ export {
 export {
     createFactory,
     EnumInitializers,
+    EnumExtra,
+    FactoryCompleter,
 } from "./factory";
 
 export {
