@@ -1,6 +1,6 @@
 {
   "name": "@alan404/enum",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "'Algebraic' enum types for typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "/dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "tsc"
   },
   "keywords": ["typescript", "type", "enum"],
   "author": "alan404",
