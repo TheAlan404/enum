@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublish": "tsc"
+    "prepublish": "build"
   },
   "keywords": ["typescript", "type", "enum"],
   "author": "alan404",
