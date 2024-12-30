@@ -1,4 +1,4 @@
-import { Enum, EnumAsTuple } from "./enum";
+import { Enum, EnumAsTuple } from "./enum.js";
 
 type Obj = Record<string, any>;
 

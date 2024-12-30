@@ -4,22 +4,22 @@ export {
     EnumData,
     InverseEnum,
     EnumAsTuple,
-} from "./enum";
+} from "./enum.js";
 
 export {
     match,
     ExhaustiveMatcher,
     Matcher,
     WildcardMatcher,
-} from "./match";
+} from "./match.js";
 
 export {
     createFactory,
     EnumInitializers,
     EnumExtra,
     FactoryCompleter,
-} from "./factory";
+} from "./factory.js";
 
 export {
     variant,
-} from "./variant";
+} from "./variant.js";

@@ -1,4 +1,4 @@
-import { Enum, EnumData, EnumVariant } from "./enum";
+import { Enum, EnumData, EnumVariant } from "./enum.js";
 
 type Obj = Record<string, any>;
 
