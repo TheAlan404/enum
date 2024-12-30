@@ -9,9 +9,16 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublish": "build"
+    "prepublish": "tsc"
   },
-  "keywords": ["typescript", "type", "enum"],
+  "keywords": [
+    "typescript",
+    "type",
+    "enum"
+  ],
   "author": "alan404",
-  "license": "GPL-3.0-only"
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
 }
